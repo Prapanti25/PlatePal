@@ -5,9 +5,10 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.platepal.profile.ProfileResponse;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 
 @Component
 public class MealPlanPromptBuilder {
@@ -17,7 +18,7 @@ public class MealPlanPromptBuilder {
         this.objectMapper = objectMapper;
     }
 
-    public String build(ProfileResponse profile) throws JsonProcessingException {
+    public String build(ProfileResponse profile) throws JacksonException {
         Map<String, Object> constraints = new LinkedHashMap<>();
         constraints.put("dailyCalorieTarget", profile.calorieTarget());
         constraints.put("householdSize", profile.householdSize());

@@ -16,8 +16,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 @Service
 public class VisionAnalysisService {
@@ -67,7 +68,7 @@ public class VisionAnalysisService {
         } catch (InterruptedException exception) {
             Thread.currentThread().interrupt();
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "OpenAI Vision request was interrupted");
-        } catch (IOException | IllegalArgumentException exception) {
+        } catch (IOException | JacksonException | IllegalArgumentException exception) {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "OpenAI Vision returned an invalid response");
         }
     }

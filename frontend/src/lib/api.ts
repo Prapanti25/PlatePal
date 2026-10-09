@@ -1,8 +1,10 @@
 import axios from "axios";
 import { firebaseAuth } from "./firebase";
 
+const backendHost = process.env.NEXT_PUBLIC_API_HOST;
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080/api/v1",
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL
+    ?? (backendHost ? `https://${backendHost}/api/v1` : "http://localhost:8080/api/v1"),
   headers: { "Content-Type": "application/json" },
 });
 

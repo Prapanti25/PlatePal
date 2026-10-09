@@ -13,9 +13,10 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.platepal.profile.ProfileResponse;
+
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 @Service
 public class MealPlanGenerator {
@@ -81,7 +82,7 @@ public class MealPlanGenerator {
                     PlanDraft.class);
             validate(plan);
             return new GenerationResult(plan, true);
-        } catch (IOException exception) {
+        } catch (IOException | RuntimeException exception) {
             throw new IllegalStateException("Fallback meal plan could not be loaded", exception);
         }
     }
