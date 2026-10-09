@@ -4,22 +4,24 @@
 
 ### 1.1 Next.js Frontend
 
-- [ ] Scaffold a Next.js app with TypeScript and Tailwind CSS.
-- [ ] Install Shadcn UI components: Button, Card, Dialog, Input, Tabs, and Toast.
-- [ ] Install Firebase, Axios, Lucide icons, and TanStack Query.
-- [ ] Configure `.env.local` with Firebase, backend URL, and Cloudinary settings.
+- [x] Scaffold a Next.js app with TypeScript and Tailwind CSS.
+- [x] Install Shadcn UI components: Button, Card, Dialog, Input, Tabs, and Sonner toast.
+- [x] Install Firebase, Axios, Lucide icons, and TanStack Query.
+- [x] Add `.env.local` and `.env.example` with the local backend URL and Firebase/Cloudinary placeholders.
+- [ ] Fill in Firebase and Cloudinary project values.
 
 ### 1.2 Spring Boot Backend
 
-- [ ] Initialize a Java 17 Spring Boot service with Web, Security, JPA, Lombok, and PostgreSQL dependencies.
-- [ ] Configure database credentials and third-party API secret placeholders.
-- [ ] Configure CORS to allow requests from `http://localhost:3000`.
+- [x] Initialize a Java 17 Spring Boot service with Web, Security, JPA, Lombok, and PostgreSQL dependencies.
+- [x] Configure environment-backed database settings and third-party API secret placeholders.
+- [x] Configure CORS to allow requests from `http://localhost:3000`.
 
 ### 1.3 Database Setup
 
 - [ ] Start a local or hosted PostgreSQL database.
-- [ ] Create the `users`, `health_profiles`, `meal_plans`, `recipes`, `grocery_items`, and `logged_meals` tables.
-- [ ] Add an index on `users.firebase_uid` and JSONB ingredient support to `recipes`.
+- [x] Add `backend/src/main/resources/schema.sql` defining the six core tables.
+- [ ] Apply the schema to a running PostgreSQL database.
+- [x] Add an index on `users.firebase_uid` and JSONB ingredient support to `recipes`.
 
 ## Phase 2: Feature Engineering (3.5 hrs)
 
