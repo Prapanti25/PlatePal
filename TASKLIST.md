@@ -59,12 +59,14 @@ Provider credentials and a running PostgreSQL database are still required to ver
 
 ### 3.1 Integration Testing
 
+- [x] Add GitHub Actions checks for frontend lint/build and credential-independent backend tests.
 - [ ] Verify the end-to-end flow: sign up, onboarding, meal plan, grocery list, and photo scan.
 - [ ] Verify fallback behavior with an invalid or disabled OpenAI API key.
 - [ ] Verify unauthenticated requests are rejected by JWT validation.
 
 ### 3.2 Render Deployment
 
+- [x] Add a Java 17 backend Dockerfile and Render Blueprint for the frontend, backend, and PostgreSQL service.
 - [ ] Deploy the Spring Boot backend and configure production secrets.
 - [ ] Deploy the Next.js frontend with the production backend URL.
 - [ ] Smoke-test the live application.
