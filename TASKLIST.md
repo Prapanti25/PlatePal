@@ -59,7 +59,8 @@ Provider credentials and a running PostgreSQL database are still required to ver
 
 ### 3.1 Integration Testing
 
-- [x] Add GitHub Actions checks for frontend lint/build and credential-independent backend tests.
+- [x] Add eight frontend unit tests for preview rendering, calendar navigation, pantry toggles, profile save, auth gates, and scanner state.
+- [x] Add GitHub Actions checks for frontend lint/tests/build and credential-independent backend tests.
 - [x] Verify the public frontend responds and backend health is `UP` on Render.
 - [x] Verify unauthenticated profile requests are rejected by the deployed backend.
 - [ ] Verify the end-to-end flow: sign up, onboarding, meal plan, grocery list, and photo scan.
