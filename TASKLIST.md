@@ -28,29 +28,32 @@
 ### 2.1 Authentication & Health Profile (FR-1)
 
 - [ ] Create a Firebase Web app and enable Email/Password and Google sign-in.
-- [ ] Implement `FirebaseJwtFilter` to validate bearer tokens and populate the Spring Security context.
-- [ ] Build onboarding fields for calorie targets, household size, weekly BDT budget, and dietary tags.
-- [ ] Implement `POST /api/v1/profile` to persist user health targets and dietary tags.
+- [x] Implement `FirebaseJwtFilter` to validate bearer tokens and populate the Spring Security context.
+- [x] Build onboarding fields for calorie targets, household size, weekly BDT budget, and dietary tags.
+- [x] Implement `POST /api/v1/profile` to persist user health targets and dietary tags.
 
 ### 2.2 AI Meal Planner (FR-2)
 
-- [ ] Build an OpenAI prompt for a 7-day plan containing 21 meals and 7 snacks, using user health constraints.
-- [ ] Parse and persist generated plans and recipes.
-- [ ] Add a 5-second timeout and fallback plan for API errors or timeouts.
-- [ ] Build a Monday-to-Sunday tabbed calendar with meal cards, prep times, and estimated BDT costs.
+- [x] Build an OpenAI prompt for a 7-day plan containing 21 meals and 7 snacks, using user health constraints.
+- [x] Parse and persist generated plans and recipes.
+- [x] Add a 5-second timeout and fallback plan for API errors or timeouts.
+- [x] Build a Monday-to-Sunday tabbed calendar with meal cards, prep times, and estimated BDT costs.
 
 ### 2.3 Smart Grocery (FR-3)
 
-- [ ] Aggregate ingredient quantities with unit conversion across the active meal plan.
-- [ ] Implement `GET /api/v1/grocery-list` and `PATCH /api/v1/grocery-list/{id}/pantry`.
-- [ ] Build a category-grouped grocery checklist.
-- [ ] Implement Brevo email dispatch at `POST /api/v1/grocery-list/email`.
+- [x] Aggregate ingredient quantities with unit conversion across the active meal plan.
+- [x] Implement `GET /api/v1/grocery-list` and `PATCH /api/v1/grocery-list/{id}/pantry`.
+- [x] Build a category-grouped grocery checklist.
+- [x] Implement Brevo email dispatch at `POST /api/v1/grocery-list/email`.
 
 ### 2.4 Visual Scanner (FR-4)
 
-- [ ] Configure a Cloudinary unsigned upload preset and build the photo upload flow.
-- [ ] Implement `POST /api/v1/meals/log-image` to extract dish name, calories, and macros from the image.
-- [ ] Save logged meals and display macro progress on the dashboard.
+- [ ] Configure a Cloudinary unsigned upload preset.
+- [x] Build the direct Cloudinary upload flow with drag-and-drop and camera input.
+- [x] Implement `POST /api/v1/meals/log-image` to extract dish name, calories, and macros from the image.
+- [x] Save logged meals and display same-day macro progress on the dashboard.
+
+Provider credentials and a running PostgreSQL database are still required to verify live integrations.
 
 ## Phase 3: Deployment & Polish (1 hr)
 
